@@ -1,0 +1,15 @@
+# import required libraries 
+import pandas as pd
+import numpy as np
+
+# read the csv file in df 
+df=pd.read_csv("file.csv")
+
+# check duplicate values from specified clomuns .
+duplicates = df.duplicated(subset=['Column1','Column2'])
+
+# remove all duplicates from specified columns and keep first duplicate value 
+df = df.drop_duplicates(subset=['Column1', 'Column2'], keep='first') 
+
+#print df 
+df
